@@ -1,15 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: backend1
-  labels:
-    app: backend1
-    app.kubernetes.io/component: backend1
-    app.kubernetes.io/instance: backend1
-    app.kubernetes.io/name: backend1
-    app.kubernetes.io/part-of: api-workshop
-    app.openshift.io/runtime: nodejs
-    app.openshift.io/runtime-namespace: api-workshop
+  name: backend
 spec:
   selector:
     matchLabels:
@@ -32,7 +24,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
           terminationMessagePath: /dev/termination-log
-          name: backend1
+          name: backend
           livenessProbe:
             httpGet:
               path: /health/liveliness
