@@ -59,7 +59,7 @@ spec:
           imagePullPolicy: IfNotPresent
           terminationMessagePolicy: File
           # Update with your image name
-          image: 'quay.io/yuvalti/quay.io/yuvalti/frontend:v1'
+          image: 'quay.io/yuvalti/frontend:v1'
           #
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
