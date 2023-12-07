@@ -6,8 +6,8 @@ namespace: user1-argocd
 spec:
 generators:
   - git:
-      repoURL: https://github.com/yuvik777/nginx
-      revision: main
+      repoURL: 'https://github.com/yuvik777/nginx'
+      revision: 'main'
       directories:
       - path: Deployment/Backend/layers/*
 template:
@@ -16,8 +16,8 @@ template:
     spec:
       project: default
       source:
-        repoURL: https://github.com/yuvik777/nginx
-        targetRevision: main
+        repoURL: 'https://github.com/yuvik777/nginx'
+        targetRevision: 'main'
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
