@@ -6,7 +6,6 @@ resources:
 - backend/2
 - frontend
 
-
 configMapGenerator:
 - name: app-environment
   literals:
@@ -14,4 +13,9 @@ configMapGenerator:
     - PORT=8080
     - HOST1=backend1
     - HOST2=backend2
-    - API_URL="Hello World"
+    - API_URL="Hello Red Hat!!!!!!!!"
+- name: app-config
+  files:
+  - frontend/conf/default.conf
+  - frontend/conf/entrypoint.sh
+    
